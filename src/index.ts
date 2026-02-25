@@ -1,3 +1,10 @@
+import 'dotenv/config'
+import express from 'express'
+import cors from 'cors'
+import { config } from './config/index.js'
+import { attestationsRouter } from './routes/attestations.js'
+import { healthRouter } from './routes/health.js'
+import { integrationsShopifyRouter } from './routes/integrations-shopify.js'
 import express from "express";
 import cors from "cors";
 import { attestationsRouter } from "./routes/attestations.js";
