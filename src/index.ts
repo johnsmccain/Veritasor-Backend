@@ -4,6 +4,7 @@ import { attestationsRouter } from './routes/attestations.js'
 import { analyticsRouter } from './routes/analytics.js'
 import { healthRouter } from './routes/health.js'
 import businessRoutes from './routes/businesses.js'
+import integrationsRouter from './routes/integrations.js'
 
 const app = express()
 const PORT = process.env.PORT ?? 3000
@@ -15,6 +16,7 @@ app.use('/api/health', healthRouter)
 app.use('/api/attestations', attestationsRouter)
 app.use('/api/businesses', businessRoutes)
 app.use('/api/analytics', analyticsRouter)
+app.use('/api/integrations', integrationsRouter)
 
 app.listen(PORT, () => {
   console.log(`Veritasor API listening on http://localhost:${PORT}`)
